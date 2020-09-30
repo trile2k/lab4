@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ITMD-361 Lab 4 – HTML Form
+    This HTML page contains an HTML form that gathers and submits its data to the provided
+    processing script. The form gathers the same info as the provided PDF sample of an
+    existing paper form.
+  -->
+  <head>
+    <meta charset="UTF-8">
+    <title>ITMD-361 Lab 4 – HTML Form</title>
+  </head>
+
+  <body>
+    <h1>Volunteer Form</h1>
+    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post"
+      autocomplete="on" enctype="multipart/form-data">
+
+      <!-- My Info group has First Name, Last Name, Phone Number, Email, Gender and Age -->
+      <fieldset>
+        <legend><strong>My Info</strong></legend>
+
+        <div>
+          <!-- Gather First name -->
+          <label>First Name*: <input type="text" name="first_name_field"
+            placeholder="Enter First Name" required</label>
+        </div>
+
+        <div>
+          <!-- Gather Last name -->
+          <label>Last Name*: <input type="text" name="last_name_field"
+            placeholder="Enter Last Name"</label>
+        </div>
+
+        <div>
+          <!-- Gather Phone Number -->
+          <label>Phone Number*: <input type="tel" name="phone_field"
+            placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required</label>
+        </div>
+
+        <div>
+          <!-- Gather Email address -->
+          <label>Email Address*: <input type="email" name="email_field"
+            placeholder="Enter a Valid Email Address" required</label>
+        </div>
+
+        <div>
+          <!-- Gather Gender data -->
+          Gender:
+          <input type="radio" id="male" name="gender_field" value="Male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender_field" value="Female">
+          <label for="female">Female</label><br>
+        </div>
+
+        <div>
+          <!-- Gather Age - drop down menu -->
+          <label for="age">Age: </label>
+          <select id="age" name="age_field">
+            <option value="under 18">under 18</option>
+            <option value="18 - 24">18 - 24</option>
+            <option value="25 - 34">25 - 34</option>
+            <option value="35 - 44">35 - 44</option>
+            <option value="45 - 54">45 - 54</option>
+            <option value="55 -64">55 - 64</option>
+            <option value="65 and over">65 and over</option>
+          </select>
+        </div>
+
+        <p>All fields marked with * are required</p>
+      </fieldset>
+
+      <fieldset>
+        <legend><strong>My Availablity</strong></legend>
+
+        <div>
+          <!-- Gather Days Available - Checkboxes -->
+          <p>Days Available: </p>
+          <input type="checkbox" id="sunday" name="available_field[]" value="Sunday">
+          <label for="sunday"> Sunday</label><br>
+          <input type="checkbox" id="monday" name="available_field[]" value="Monday">
+          <label for="monday"> Monday</label><br>
+          <input type="checkbox" id="tuesday" name="available_field[]" value="Tuesday">
+          <label for="tuesday"> Tuesday</label><br>
+          <input type="checkbox" id="wednesday" name="available_field[]" value="Wednesday">
+          <label for="wednesday"> Wednesday</label><br>
+          <input type="checkbox" id="thursday" name="available_field[]" value="Thursday">
+          <label for="thursday"> Thursday</label><br>
+          <input type="checkbox" id="friday" name="available_field[]" value="Friday">
+          <label for="friday"> Friday</label><br>
+          <input type="checkbox" id="saturday" name="available_field[]" value="Saturday">
+          <label for="saturday"> Saturday</label><br>
+        </div>
+
+        <div>
+          <!-- Gather Comments - Multi-Line Text Area -->
+          <p>Any Comments?</p>
+          <label for="my_comments"></label>
+          <textarea id="my_comments" name="comments_field" rows="10" cols="30"
+            placeholder="My comments here"</textarea>
+        </div>
+
+        <div>
+          <!-- Hidden field - use IIT Login Username -->
+          <input type="hidden" name="hidden_field" value="tle28">
+        </div>
+      </fieldset>
+
+      <!-- Button to submit the volunteer form -->
+      <input type="submit" value="Submit Volunteer Form">
+      
+    </form>
+  </body>
+</html>

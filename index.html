@@ -17,32 +17,32 @@
 
       <!-- My Info group has First Name, Last Name, Phone Number, Email, Gender and Age -->
       <fieldset>
-        <legend><strong>My Info</strong></legend>
+        <legend><h2>My Info</h2></legend>
 
         <div>
           <!-- Gather First name -->
-          <label>First Name*: <input type="text" name="first_name_field"
+          <label>First Name: <input type="text" name="first_name_field"
             placeholder="Enter First Name" required</label>
         </div>
-
+        <br>
         <div>
           <!-- Gather Last name -->
-          <label>Last Name*: <input type="text" name="last_name_field"
+          <label>Last Name: <input type="text" name="last_name_field"
             placeholder="Enter Last Name"</label>
         </div>
-
+        <br>
         <div>
           <!-- Gather Phone Number -->
-          <label>Phone Number*: <input type="tel" name="phone_field"
+          <label>Phone Number: <input type="tel" name="phone_field"
             placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required</label>
         </div>
-
+        <br>
         <div>
           <!-- Gather Email address -->
-          <label>Email Address*: <input type="email" name="email_field"
+          <label>Email Address: <input type="email" name="email_field"
             placeholder="Enter a Valid Email Address" required</label>
         </div>
-
+        <br>
         <div>
           <!-- Gather Gender data -->
           Gender:
@@ -51,7 +51,7 @@
           <input type="radio" id="female" name="gender_field" value="Female">
           <label for="female">Female</label><br>
         </div>
-
+        <br>
         <div>
           <!-- Gather Age - drop down menu -->
           <label for="age">Age: </label>
@@ -65,16 +65,14 @@
             <option value="65 and over">65 and over</option>
           </select>
         </div>
-
-        <p>All fields marked with * are required</p>
       </fieldset>
 
       <fieldset>
-        <legend><strong>My Availablity</strong></legend>
+        <legend><h2>My Availablity</h2></legend>
 
         <div>
           <!-- Gather Days Available - Checkboxes -->
-          <p>Days Available: </p>
+          Days Available:<br>
           <input type="checkbox" id="sunday" name="available_field[]" value="Sunday">
           <label for="sunday"> Sunday</label><br>
           <input type="checkbox" id="monday" name="available_field[]" value="Monday">
@@ -88,15 +86,13 @@
           <input type="checkbox" id="friday" name="available_field[]" value="Friday">
           <label for="friday"> Friday</label><br>
           <input type="checkbox" id="saturday" name="available_field[]" value="Saturday">
-          <label for="saturday"> Saturday</label><br>
+          <label for="saturday"> Saturday</label><br><br>
         </div>
 
         <div>
           <!-- Gather Comments - Multi-Line Text Area -->
-          <p>Any Comments?</p>
-          <label for="my_comments"></label>
-          <textarea id="my_comments" name="comments_field" rows="10" cols="30"
-            placeholder="My comments here"</textarea>
+          Any Comments?<br>
+          <textarea name="comments_field" rows="10" cols="80" placeholder="Write comments here"></textarea>
         </div>
 
         <div>
@@ -106,8 +102,8 @@
       </fieldset>
 
       <!-- Button to submit the volunteer form -->
-      <input type="submit" value="Submit Volunteer Form">
-      
+      <br><br><input type="submit" value="Submit Volunteer Form">
+
     </form>
   </body>
 </html>

@@ -14,44 +14,37 @@
     <h1>Volunteer Form</h1>
     <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post"
       autocomplete="on" enctype="multipart/form-data">
-
       <!-- My Info group has First Name, Last Name, Phone Number, Email, Gender and Age -->
       <fieldset>
         <legend><h2>My Info</h2></legend>
-
         <div>
           <!-- Gather the required First name -->
           <label>First Name*: <input type="text" name="first_name_field"
             placeholder="Enter First Name" required="required"></label>
         </div>
-        <br>
         <div>
           <!-- Gather the required Last name -->
-          <label>Last Name*: <input type="text" name="last_name_field"
-            placeholder="Enter Last Name" required="required"></label>
+          <p><label>Last Name*: <input type="text" name="last_name_field"
+            placeholder="Enter Last Name" required="required"></label></p>
         </div>
-        <br>
         <div>
           <!-- Gather the required US Phone Number -->
-          <label>Phone Number*: <input type="tel" name="phone_field" placeholder="123-456-7890"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required"></label>
+          <p><label>Phone Number*: <input type="tel" name="phone_field" placeholder="123-456-7890"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required"></label></p>
         </div>
-        <br>
         <div>
           <!-- Gather the required Email address -->
-          <label>Email Address*: <input type="email" name="email_field"
-            placeholder="Enter a Valid Email Address" required="required"></label>
+          <p><label>Email Address*: <input type="email" name="email_field"
+            placeholder="Enter a Valid Email Address" required="required"></label></p>
         </div>
-        <br>
         <div>
           <!-- Gather Gender data -->
-          Gender:
+          <p>Gender:
           <input type="radio" id="male" name="gender_field" value="Male">
           <label for="male">Male</label>
           <input type="radio" id="female" name="gender_field" value="Female">
-          <label for="female">Female</label><br>
+          <label for="female">Female</label></p>
         </div>
-        <br>
         <div>
           <!-- Gather Age - drop down menu -->
           <label for="age">Age: </label>
@@ -65,45 +58,56 @@
             <option value="65 and over">65 and over</option>
           </select>
         </div>
-        <br>Note: * indicates required field<br>
+        <p>Note: * indicates required field</p>
       </fieldset>
-
       <fieldset>
         <legend><h2>My Availablity</h2></legend>
         <div>
           <!-- Gather Days Available - Checkboxes -->
-          Days Available:<br>
-          <input type="checkbox" id="sunday" name="available_field[]" value="Sunday">
-          <label for="sunday"> Sunday</label><br>
-          <input type="checkbox" id="monday" name="available_field[]" value="Monday">
-          <label for="monday"> Monday</label><br>
-          <input type="checkbox" id="tuesday" name="available_field[]" value="Tuesday">
-          <label for="tuesday"> Tuesday</label><br>
-          <input type="checkbox" id="wednesday" name="available_field[]" value="Wednesday">
-          <label for="wednesday"> Wednesday</label><br>
-          <input type="checkbox" id="thursday" name="available_field[]" value="Thursday">
-          <label for="thursday"> Thursday</label><br>
-          <input type="checkbox" id="friday" name="available_field[]" value="Friday">
-          <label for="friday"> Friday</label><br>
-          <input type="checkbox" id="saturday" name="available_field[]" value="Saturday">
-          <label for="saturday"> Saturday</label><br><br>
+          Days Available:
+          <div>
+            <input type="checkbox" id="sunday" name="available_field[]" value="Sunday">
+            <label for="sunday"> Sunday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="monday" name="available_field[]" value="Monday">
+            <label for="monday"> Monday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="tuesday" name="available_field[]" value="Tuesday">
+            <label for="tuesday"> Tuesday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="wednesday" name="available_field[]" value="Wednesday">
+            <label for="wednesday"> Wednesday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="thursday" name="available_field[]" value="Thursday">
+            <label for="thursday"> Thursday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="friday" name="available_field[]" value="Friday">
+            <label for="friday"> Friday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="saturday" name="available_field[]" value="Saturday">
+            <label for="saturday"> Saturday</label>
+          </div>
         </div>
-
         <div>
           <!-- Gather Comments - Multi-Line Text Area -->
-          Any Comments?<br>
+          <p>Any Comments?</p>
           <textarea name="comments_field" rows="10" cols="80" placeholder="Write comments here"></textarea>
         </div>
-
         <div>
           <!-- Hidden field - use my IIT Login Username -->
           <input type="hidden" name="hidden_field" value="tle28">
         </div>
       </fieldset>
-
       <!-- Button to submit the volunteer form -->
-      <br><br><input type="submit" value="Submit Volunteer Form">
-
+      <div>
+        <p><input type="submit" value="Submit Volunteer Form"></p>
+      </div>
     </form>
   </body>
 </html>
